@@ -1,0 +1,45 @@
+// standards for screen sizes (media queries)
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==phone-tall {
+    @media (min-width: 320px) {
+      html {
+        font-size: 1rem;
+      }
+
+      @content;
+    }
+  }
+
+  @if $breakpoint ==phone-wide {
+    @media (min-width: 576px) {
+      html {
+        font-size: 1rem;
+      }
+
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+
+    @media (min-width: 768px),
+    (max-width: 991px) {
+      html {
+        font-size: 1.0625rem
+      }
+
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    @media (min-width: 1200px) {
+      html {
+        font-size: 1.1875rem;
+      }
+
+      @content;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// import all SCSS stylesheets for main to reference/use
+@import "./styles/mixins.scss";
+@import "./styles/variables.scss";
+
+@import "./styles/components/footer";
+@import "./styles/components/header";
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App_container {
+  width: 100vw;
+  min-width: 320px;
+  height: 100vh;
+
+  color: #FFF;
+  background: $color-main;
+  text-align: center;
+  font: map-get($textstyle, regular);
+}

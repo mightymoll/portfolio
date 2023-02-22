@@ -1,9 +1,6 @@
 // use react router to control what is rendered in the virtual DOM
 import { Routes, Route } from "react-router-dom";
 
-// import CSS stylesheet
-import './styles/App.css';
-
 /** import website 'page' files and components
  * HOME page : single-page scroll with Hero, Projects, and About sections
  * Projects: card section that will open individual project page when card is clicked
@@ -12,14 +9,17 @@ import './styles/App.css';
  */
 
 import Home from './pages/Home';
-import Project from './pages/Project';
-import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Project from './pages/Project';
+import Error from './pages/Error';
+
+// import SCSS stylesheet (site is using SASS)
+import './main.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App_container">
       <Header className="header" />
       <Routes>
         <Route path="/" element={<Home />} />
