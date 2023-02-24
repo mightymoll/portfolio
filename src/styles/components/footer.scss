@@ -1,0 +1,11 @@
+.footer_container {
+  @include flexbox(row, center, center);
+  height: 60px;
+  gap: 10px;
+  padding: $small;
+}
+
+.footer_copyright {
+  color: $color-light;
+  line-height: 27px;
+}

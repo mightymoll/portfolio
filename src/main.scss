@@ -5,22 +5,21 @@
 @import "./styles/components/footer";
 @import "./styles/components/header";
 
-
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: $color-main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App_container {
+  @extend %centered;
   width: 100vw;
   min-width: 320px;
+  max-width: 1800px;
   height: 100vh;
-
   color: #FFF;
-  background: $color-main;
-  text-align: center;
   font: map-get($textstyle, regular);
 }

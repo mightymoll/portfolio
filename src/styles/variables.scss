@@ -1,5 +1,5 @@
 // import fonts used from google
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&display=swap');
 
@@ -25,3 +25,18 @@ $color-main: #004236;
 $color-alt: #52A17E;
 $color-accent: #F200FF;
 $color-light: #BDE0C0;
+
+// margins and padding
+$full: 80px;
+$half: 40px;
+$small: 20px;
+$gap: 20px;
+$radius-lg: 25px;
+$radius-med: 10px;
+$radius-sm: 5px;
+
+%centered {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

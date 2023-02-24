@@ -9,12 +9,8 @@ function Home() {
   return (
     <div className="content">
       <Hero imageSrc={meImage} />
-      <section id='projects'>
-        <Projects />
-      </section>
-      <section id='about'>
-        <About />
-      </section>
+      <Projects id='projects' />
+      <About id='about' />
     </div>
   );
 }

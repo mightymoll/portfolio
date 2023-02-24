@@ -1,5 +1,4 @@
 // standards for screen sizes (media queries)
-
 @mixin respond($breakpoint) {
   @if $breakpoint ==phone-tall {
     @media (min-width: 320px) {
@@ -41,5 +40,30 @@
 
       @content;
     }
+  }
+}
+
+// flexbox mixin
+@mixin flexbox($flex-direction: false,
+  $justify-content: false,
+  $align-items: false,
+  $gap: false,
+  $flex: false) {
+  display: flex;
+
+  @if $flex-direction !=false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $justify-content !=false {
+    justify-content: $justify-content;
+  }
+
+  @if $align-items !=false {
+    align-items: $align-items;
+  }
+
+  @if $gap !=false {
+    gap: $gap;
   }
 }

@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from '../assets/logo.svg'
+import { ReactComponent as VIcon } from '../assets/V.svg'
 
 /** get current year to display in copyright text
  * must convert data to string to avoid object-type errors in React */
@@ -7,12 +7,11 @@ let year = currentYear.toString();
 
 function Footer() {
   return (
-    <footer className='footer'>
-      <div className='footer_logo' alt='logo Molly Felts Vallin'>
-        <Logo height='36px' />
-      </div>
-      <p className='footer_copyright'>Copyright ©{year} Molly Felts Vallin</p>
-    </footer>
+    <footer className='footer_container'>
+      <VIcon fill="#BDE0C0" transform='rotate(90),scale(-0.4, 0.4)' alt='>' />
+      <p className='footer_copyright'>Copyright © {year} Molly Felts Vallin</p>
+      <VIcon fill="#BDE0C0" transform='rotate(-90),translate(0,0) scale(-0.4, 0.4)' alt='>' />
+    </footer >
   )
 };
 
