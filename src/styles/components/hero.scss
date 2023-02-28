@@ -1,0 +1,98 @@
+.hero {
+  height: 30%;
+}
+
+.hero.left {
+  flex-basis: 70%;
+  @include flexbox(row, space-between);
+}
+
+.hero_info {
+  @include flexbox(column, flex-start);
+  padding: $half 0 0 $full;
+  min-width: 270px;
+}
+
+.hero_buttons {
+  @include flexbox(row, flex-start);
+  width: 90%;
+  gap: $half;
+  margin-top: $full;
+}
+
+.hero_image {
+  display: flex;
+  @include flexbox(row, flex-end);
+  width: 100%;
+}
+
+.image_container {
+  mix-blend-mode: multiply;
+  filter: opacity(90%);
+  object-fit: cover;
+  overflow: hidden;
+  min-height: 400px;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero_image img {
+  max-height: 700px;
+}
+
+.hero.right {
+  padding: 0 $full;
+  min-width: max-content;
+  margin: auto 0 auto $small;
+}
+
+.hero_function {
+  @include flexbox(column, flex-start);
+  font: map-get($textstyle, code);
+  color: $color-accent;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.typed {
+  display: inline-flex;
+}
+
+.typed span {
+  word-break: break-all;
+  height: 1.4rem;
+  width: 0%;
+  overflow: hidden;
+  animation: typewriter 2.6s linear forwards alternate;
+  animation-delay: 1s;
+}
+
+.typed span:before {
+  content: " ";
+  display: inline-block;
+}
+
+.typed.line_2 span {
+  margin-left: $small;
+  animation-delay: 3.6s;
+  animation-duration: 1.9s;
+}
+
+.typed.line_3 span {
+  margin-left: $small;
+  animation-delay: 5.5s;
+  animation-duration: 2.9s;
+}
+
+.typed.line_4 span {
+  animation-delay: 8.4s;
+  animation-duration: 0.2s;
+}
+
+@keyframes typewriter {
+
+  90%,
+  100% {
+    width: 100%
+  }
+}

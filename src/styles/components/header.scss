@@ -7,7 +7,6 @@
   @include flexbox(column, center, stretch);
   position: sticky;
   top: 0px;
-  height: 60px;
   padding: $small $half;
   background: $color-main;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -33,23 +32,23 @@
 }
 
 .header_nav a {
-  width: 70px;
+  width: 80px;
   text-align: center;
-  font: map-get($textstyle, thin);
-  color: #fff;
-  text-transform: lowercase;
+  font: 400 0.9rem $font-accent;
+  letter-spacing: 0.1rem;
+  color: $color-light;
   text-decoration: none;
 
   &:focus {
     pointer-events: none;
     text-decoration: underline;
     text-underline-offset: 7px;
-    color: $color-light;
+    color: $color-alt;
   }
 
   &:hover {
     color: $color-accent;
     font-weight: 500;
-    font-size: 105%;
+    font-size: 1rem;
   }
 }

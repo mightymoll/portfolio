@@ -7,3 +7,4 @@ Stream-of-Consciousness Lessons:
 2. date information via a js function must be converted to a string if used within a child component
 3. React does not like empty .jsx files; name the functions and include 'export default XXX' inside if files are generated before content is added
 4. svg logos are nice but difficult manipulate with CSS (re-coloring easier than png)
+5. typing animation that uses <span> within <span> creates a cyclical calculation where both are dependent on the other. first <span>: size depends on content, second <span> uses % width so the width is based on its container.

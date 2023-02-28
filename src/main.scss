@@ -4,22 +4,53 @@
 
 @import "./styles/components/footer";
 @import "./styles/components/header";
+@import "./styles/components/hero";
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: $color-main;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .App_container {
   @extend %centered;
-  width: 100vw;
   min-width: 320px;
   max-width: 1800px;
-  height: 100vh;
   color: #FFF;
   font: map-get($textstyle, regular);
+}
+
+h1 {
+  font: map-get($textstyle, tagline);
+  letter-spacing: 2px;
+  margin: 0 0 $small;
+}
+
+a.button {
+  color: $color-main;
+  font: map-get($textstyle, code);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: right;
+  display: inline-block;
+  padding: 6px 8px 4px;
+  width: 80px;
+  min-width: 60px;
+  background-color: $color-light;
+  border-radius: 4px;
+  border: 2px solid $color-alt;
+  box-shadow: 2px 2px 0 0 $color-alt;
+
+  &:hover {
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    box-shadow: 2px 2px 0 0 $color-accent;
+    transition: 0.2s ease all;
+  }
+}
+
+.container {
+  @include flexbox(row, space-between, flex-start);
+  padding: $half;
 }
