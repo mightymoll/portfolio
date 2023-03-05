@@ -1,15 +1,32 @@
 import myImage from '../assets/me.png'
+import carrotGraphic from "../assets/carrot.png"
 import CV from '../assets/CV_Felts Vallin_Molly.pdf'
+import css from '../assets/stackLogos/CSS.png';
+import html from '../assets/stackLogos/HTML.png';
+import javascript from '../assets/stackLogos/JavaScript.png';
+import node from '../assets/stackLogos/nodeJS.png';
+import react from '../assets/stackLogos/React.png';
+import sass from '../assets/stackLogos/SASS.png';
+
 
 function Hero() {
   return (
-    <section className="container">
-      <div className="hero left">
+    <section className="hero">
+      <div className="hero_main">
         <div className="hero_info">
           <h1>Hi I'm Molly</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempora velit harum esse maiores consequatur. Eius accusantium fuga aliquam tempore voluptate pariatur quod, rerum natus, consectetur perferendis earum doloremque sint.</p>
-          <div className="hero_stack">
-          </div>
+          <p>Passionate about <strong>squeaky-clean</strong> code & currently seeking opportunities in web development near <strong>Paris, France </strong><nobr>- oui, oui, c'est ma vie !</nobr></p>
+          <p>I'm a former interior architect with a demonstrated history of working in <nobr>multi-disciplinary</nobr> roles in the USA and South Korea.</p>
+          <h4>my stack :</h4>
+          <ul className="hero_stack">
+            <li className="stack_item"><img src={css} alt="" />CSS 3</li>
+            <li className="stack_item"><img src={html} alt="" />HTML 5</li>
+            <li className="stack_item"><img src={javascript} alt="" />JavaScript</li>
+            <li className="stack_item"><img src={node} alt="" />node.js</li>
+            <li className="stack_item"><img src={react} alt="" />React js</li>
+            <li className="stack_item"><img src={sass} alt="" />SASS</li>
+          </ul>
+          <h4>deep-dive :</h4>
           <div className="hero_buttons">
             <a className="button" href={CV} download="CV_Felts Vallin_Molly">CV</a>
             <a className="button" href="https://github.com/mightymoll">GitHub</a>
@@ -17,19 +34,19 @@ function Hero() {
           </div>
         </div>
         <div className="hero_image">
-          <div className="image_container">
-            <img src={myImage} alt="Molly running" />
-          </div>
+          <img src={myImage} alt="Molly running" />
         </div>
       </div>
-      <div className="hero right">
+      <aside className="hero_aside">
+        <div className="hero_aside-background">
+          <img src={carrotGraphic} alt="decorative graphic" />
+        </div>
         <div className="hero_function">
-          <span className="typed line_1"><span>{`if (!architect(inFrance)){`}</span></span>
-          <span className="typed line_2"><span>{`architect().stop();`}</span></span>
-          <span className="typed line_3"><span>{`const newCareer = developper;`}</span></span>
-          <span className="typed line_4"><span>{`};`}</span></span>
+          <span className="typed line_1"><span>{`if (theDevil == isInTheDetails) {`}</span></span>
+          <span className="typed line_2"><span>{`goodFriendsOfMine.push(theDevil)`}</span></span>
+          <span className="typed line_3"><span>{`};`}</span></span>
         </div>
-      </div>
+      </aside>
     </section>
   )
 };

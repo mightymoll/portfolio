@@ -1,57 +1,99 @@
 .hero {
+  @extend %centered;
+  @include flexbox(row, space-between, center);
   height: 30%;
+  padding: 0 $full;
 }
 
-.hero.left {
-  flex-basis: 70%;
-  @include flexbox(row, space-between);
+.hero_main {
+  max-width: 65%;
+  @include flexbox(row, flex-start, center);
+  margin-right: $half;
 }
 
 .hero_info {
   @include flexbox(column, flex-start);
-  padding: $half 0 0 $full;
-  min-width: 270px;
+  padding-top: $half;
+  max-width: 550px;
+  z-index: 50;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.hero_stack {
+  @include flexbox(row, space-between);
+  gap: $small;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $small;
+}
+
+.stack_item {
+  @include flexbox(column, space-between, center);
+  font: map-get($textstyle, small);
+  margin: 0;
+  min-width: max-content;
+}
+
+.stack_item>img {
+  height: 40px;
+  margin-bottom: 10px;
+  filter: saturate(0) brightness(200%);
 }
 
 .hero_buttons {
   @include flexbox(row, flex-start);
-  width: 90%;
   gap: $half;
-  margin-top: $full;
 }
 
 .hero_image {
-  display: flex;
-  @include flexbox(row, flex-end);
-  width: 100%;
-}
+  max-height: 500px;
+  min-width: 200px;
+  margin-top: $half;
+  margin-left: -200px;
 
-.image_container {
   mix-blend-mode: multiply;
   filter: opacity(90%);
-  object-fit: cover;
   overflow: hidden;
-  min-height: 400px;
-  position: absolute;
+}
+
+.hero_image>img {
+  width: 100%;
   z-index: -1;
 }
 
-.hero_image img {
-  max-height: 700px;
+.hero_aside {
+  @include flexbox(row, center, center);
 }
 
-.hero.right {
-  padding: 0 $full;
-  min-width: max-content;
-  margin: auto 0 auto $small;
+.hero_aside-background {
+  flex: 1 1 100%;
+  filter: opacity(5%);
+  margin-right: -280px;
+}
+
+.hero_aside-background>img {
+  width: 100%;
+  max-height: 400px;
+  z-index: -1;
+  object-fit: contain;
 }
 
 .hero_function {
   @include flexbox(column, flex-start);
   font: map-get($textstyle, code);
   color: $color-accent;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  min-width: max-content;
+  z-index: 50;
 }
 
 .typed {
@@ -60,10 +102,10 @@
 
 .typed span {
   word-break: break-all;
-  height: 1.4rem;
+  height: 1rem;
   width: 0%;
   overflow: hidden;
-  animation: typewriter 2.6s linear forwards alternate;
+  animation: typewriter 3.3s linear forwards alternate;
   animation-delay: 1s;
 }
 
@@ -74,18 +116,12 @@
 
 .typed.line_2 span {
   margin-left: $small;
-  animation-delay: 3.6s;
-  animation-duration: 1.9s;
+  animation-delay: 3.5s;
+  animation-duration: 3.2s;
 }
 
 .typed.line_3 span {
-  margin-left: $small;
-  animation-delay: 5.5s;
-  animation-duration: 2.9s;
-}
-
-.typed.line_4 span {
-  animation-delay: 8.4s;
+  animation-delay: 6.8s;
   animation-duration: 0.2s;
 }
 
