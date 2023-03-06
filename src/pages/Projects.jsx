@@ -1,8 +1,12 @@
+import CardGallery from "../components/CardGallery";
+
+
 function Projects() {
   return (
-    <section>
-    </section>
+    <section id='Projects' >
+      <CardGallery />
+    </section >
   )
-};
+}
 
-export default Projects;
+export default Projects

@@ -2,9 +2,11 @@
 @import "./styles/mixins.scss";
 @import "./styles/variables.scss";
 
+
 @import "./styles/components/footer";
 @import "./styles/components/header";
 @import "./styles/components/hero";
+@import "./styles/components/card";
 
 body {
   box-sizing: border-box;
@@ -71,4 +73,15 @@ a.button {
 .container {
   @include flexbox(row, space-between, flex-start);
   padding: $half;
+}
+
+.projects_gallery {
+  @extend %centered;
+  @include flexbox(row, flex-start, space-between);
+  gap: $half;
+  padding: $full;
+  margin-bottom: $full;
+
+  background: $color-light;
+  list-style: none;
 }

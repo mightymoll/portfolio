@@ -9,8 +9,8 @@ function Home() {
   return (
     <div className="content">
       <Hero imageSrc={meImage} />
-      <Projects id='projects' />
-      <About id='about' />
+      <Projects />
+      <About id="about" />
     </div>
   );
 }

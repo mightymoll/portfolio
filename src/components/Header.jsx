@@ -36,13 +36,13 @@ function Header() {
       <div className="header_container">
         <Logo className='header_logo' alt='Molly Felts Vallin Logo' />
         <nav className='header_nav'>
-          <Link to="/" className='header_link'>
+          <Link to="/" className="header_link">
             Home
           </Link>
-          <HashLink smooth to='/#projects'>
+          <HashLink smooth to="/#projects">
             Projects
           </HashLink>
-          <HashLink smooth to='/#about'>
+          <HashLink smooth to="/#about">
             About
           </HashLink>
         </nav>

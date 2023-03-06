@@ -3,6 +3,7 @@
   @include flexbox(row, space-between, center);
   height: 30%;
   padding: 0 $full;
+  margin-bottom: $full;
 }
 
 .hero_main {
