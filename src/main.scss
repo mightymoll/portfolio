@@ -37,10 +37,12 @@ h1 {
 
 h4 {
   color: $color-accent;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border-bottom: 2px solid $color-accent;
   margin: $small 0;
+  font: $font-accent, 300, 1.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow:
+    1px 1px 0 #FFF;
 }
 
 p {
