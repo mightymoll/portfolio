@@ -8,9 +8,11 @@ function CardGallery() {
           <li key={id} className='card_container'>
             <div className='card_img'>
               <img src={cover} alt={title} />
-              <div className='card_link'>
-                <a target="_blank" rel="noreferrer" href={url}>{`go to the ${title} site >>`}</a>
-              </div>
+              {url ?
+                <div className='card_link'>
+                  <a target="_blank" rel="noreferrer" href={url}>{`go to the ${title} site >>`}</a></div>
+                : <div></div>
+              }
             </div>
             <div className='card_info'>
               <div className='card_title'>
