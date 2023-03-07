@@ -1,5 +1,4 @@
 import { projectData } from "../data/projectData";
-import { Link } from "react-router-dom";
 
 function CardGallery() {
   return (
