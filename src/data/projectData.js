@@ -11,13 +11,12 @@ export const projectData =
         "JavaScript",
         "SASS",
       ],
-      "cover": require("../assets/projectFiles/Kasa.png"),
+      "cover": require("../assets/projectFiles/Kasa.jpg"),
       "pictures": [
 
       ],
       "url": "https://kasa.mollydoes.dev/",
       "host": "netlify",
-      "presentation": "../assets/projectFiles/Kasa.pdf"
     },
     {
       "id": "2",
@@ -29,7 +28,7 @@ export const projectData =
         "API rest",
         "localStorage"
       ],
-      "cover": require("../assets/projectFiles/Kanap.png"),
+      "cover": require("../assets/projectFiles/Kanap.jpg"),
       "pictures": [
 
       ],
@@ -67,7 +66,7 @@ export const projectData =
         "CSS",
         "HTML"
       ],
-      "cover": require("../assets/projectFiles/LaPanthere.png"),
+      "cover": require("../assets/projectFiles/LaPanthere.jpg"),
       "pictures": [
 
       ],
@@ -84,7 +83,7 @@ export const projectData =
         "SASS",
         "HTML",
       ],
-      "cover": require("../assets/projectFiles/Ohmyfood.png"),
+      "cover": require("../assets/projectFiles/Ohmyfood.jpg"),
       "pictures": [
 
       ],
@@ -100,7 +99,7 @@ export const projectData =
         "HTML",
         "CSS",
       ],
-      "cover": require("../assets/projectFiles/Booki.png"),
+      "cover": require("../assets/projectFiles/Booki.jpg"),
       "pictures": [
 
       ],

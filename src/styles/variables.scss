@@ -46,6 +46,6 @@ $radius-sm: 5px;
   @include flexbox(column, flex-start);
   cursor: pointer;
   padding: 0px;
-  border-radius: $radius-med;
+  border-radius: $radius-lg;
   overflow: hidden;
 }
