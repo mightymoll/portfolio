@@ -2,7 +2,7 @@ import { projectData } from "../data/projectData";
 
 function CardGallery() {
   return (
-    <section id="projects">
+    <div>
       <ul className='projects_gallery'>
         {projectData.map(({ id, title, description, timeline, tags, cover, url }) => (
           <li key={id} className='card_container'>
@@ -10,13 +10,13 @@ function CardGallery() {
               <img src={cover} alt={title} />
               {url ?
                 <div className='card_link'>
-                  <a target="_blank" rel="noreferrer" href={url}>{`go to the ${title} site >>`}</a></div>
+                  <a target="_blank" rel="noreferrer" href={url}>{`check out ${title} >>`}</a></div>
                 : <div></div>
               }
             </div>
             <div className='card_info'>
               <div className='card_title'>
-                <h2>{title}</h2>
+                <h4>{title}</h4>
                 <p className='card_timeline'>{timeline}</p>
               </div>
               <p className='card_description'>{description}</p>
@@ -28,7 +28,7 @@ function CardGallery() {
           </li>
         ))}
       </ul>
-    </section>)
+    </div>)
 };
 
 export default CardGallery;

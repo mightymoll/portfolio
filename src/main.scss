@@ -26,23 +26,38 @@ body {
 h1 {
   font: map-get($textstyle, tagline);
   letter-spacing: 3px;
-  margin: 0 0 $small;
   color: #FFF;
-  text-shadow:
-    3px 3px 0 $color-accent,
-    2px 2px 0 $color-accent,
-    1px 1px 0 $color-accent;
-  -webkit-text-stroke: 1px $color-accent;
+  text-shadow: text3D(3, $color-accent);
+
+  margin: 0 0 $small;
+}
+
+h2 {
+  font: map-get($textstyle, xlarge);
+  color: $color-main;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: text3D(3, #FFF);
+
+  margin: 0 0 $half;
+}
+
+h3 {
+  font: map-get($textstyle, large);
+  color: $color-accent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: text3D(1, #FFF);
+
+  margin: $small 0;
 }
 
 h4 {
-  color: $color-accent;
-  margin: $small 0;
-  font: $font-accent, 300, 1.5rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  text-shadow:
-    1px 1px 0 #FFF;
+  font: map-get($textstyle, large);
+  font-weight: 600;
+  line-height: 1.5rem;
+
+  margin: 0;
 }
 
 p {
@@ -77,13 +92,22 @@ a.button {
   padding: $half;
 }
 
+.projects_container {
+  padding: $half $full $half;
+  position: relative;
+  background: $color-light;
+  margin-bottom: $full;
+  z-index: 1;
+  @include angle(after);
+  @include angle(before, true);
+}
+
 .projects_gallery {
   @extend %centered;
-  @include flexbox(row, flex-start, space-between);
+  @include flexbox(row, space-between);
+  flex-wrap: wrap;
   gap: $half;
-  padding: $full;
-  margin-bottom: $full;
-
-  background: $color-light;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }

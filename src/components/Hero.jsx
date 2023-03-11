@@ -17,7 +17,7 @@ function Hero() {
           <h1>Hi I'm Molly</h1>
           <p>Passionate about <strong>squeaky-clean</strong> code & currently seeking opportunities in web development near <strong>Paris, France </strong><nobr>- oui, oui, c'est ma vie !</nobr></p>
           <p>I'm a former interior architect with a demonstrated history of working in <nobr>multi-disciplinary</nobr> roles in the USA and South Korea.</p>
-          <h4>{`<my stack />`}</h4>
+          <h3>{'<my stack />'}</h3>
           <ul className="hero_stack">
             <li className="stack_item"><img src={css} alt="" />CSS 3</li>
             <li className="stack_item"><img src={html} alt="" />HTML 5</li>
@@ -26,7 +26,7 @@ function Hero() {
             <li className="stack_item"><img src={react} alt="" />React js</li>
             <li className="stack_item"><img src={sass} alt="" />SASS</li>
           </ul>
-          <h4>{`< dive-in />`}</h4>
+          <h3>{'< dive-in />'}</h3>
           <div className="hero_buttons">
             <a className="button" href={CV} download="CV_Felts Vallin_Molly">CV</a>
             <a className="button" href="https://github.com/mightymoll">GitHub</a>

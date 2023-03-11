@@ -3,7 +3,8 @@ import CardGallery from "../components/CardGallery";
 
 function Projects() {
   return (
-    <section id='Projects' >
+    <section id='Projects' className="projects_container">
+      <h2>{'< Projects />'}</h2>
       <CardGallery />
     </section >
   )
