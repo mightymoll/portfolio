@@ -1,8 +1,8 @@
-function About() {
+function Contact() {
   return (
     <section>
     </section>
   )
 };
 
-export default About;
+export default Contact;

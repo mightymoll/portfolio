@@ -8,10 +8,10 @@ header {
   padding: $small $half;
   background-color: $color-main-transparent;
   box-shadow: 0 0 2px 2px #00221c40;
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
+  cursor: pointer;
 }
 
 .header_container {

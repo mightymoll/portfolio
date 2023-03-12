@@ -1,23 +1,26 @@
 /** use React
- * createRoot connects React components to a DOM node (for rendering purposes)
  * BrowserRouter allows for routing to different urls which informs React which 'page' to render
  * reportWebVitals will log performance metrics in the console 
  */
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import * as ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
 
 // import App.jsx which defines routes to different 'pages'
 import App from './App';
 
-// render site (App.jsx) inside of the div with id of 'root' listed in index.html
-const root = createRoot(document.getElementById('root'));
+// helper that makes page 'scroll to top (of section)' on click
+import ScrollToTop from "./helpers/ScrollToTop";
 
+// render site (App.jsx) inside of the div with id of 'root' listed in index.html
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <Router>
+    <ScrollToTop />
     <App />
-  </BrowserRouter>
+  </Router>
 );
+
 reportWebVitals(console.log);

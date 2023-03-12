@@ -9,24 +9,20 @@ import { Routes, Route } from "react-router-dom";
  */
 
 import Home from './pages/Home';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import ProjectPage from './pages/ProjectPage';
 import Error from './pages/Error';
-
-// import SCSS stylesheet (site is using SASS)
-import './main.scss';
+import Layout from "./pages/Layout";
 
 function App() {
   return (
     <div className="App_container">
-      <Header className="header" />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="projects/*" exact element={<ProjectPage />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Home />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route path="*" element={<Error />} />
+        </Route>
       </Routes>
-      <Footer className="footer" />
     </div>
   );
 }

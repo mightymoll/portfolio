@@ -2,17 +2,16 @@
 import meImage from '../assets/me.png'
 import Hero from '../components/Hero';
 import Projects from './Projects';
-import About from './About';
-
+import Contact from '../components/Contact';
 
 function Home() {
   return (
     <div className="content">
       <Hero imageSrc={meImage} />
       <Projects />
-      <About id="about" />
+      <Contact />
     </div>
-  );
+  )
 }
 
 export default Home;
