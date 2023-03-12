@@ -2,23 +2,16 @@
 @import '../mixins.scss';
 @import '../variables.scss';
 
-
-.header {
+header {
+  @extend %centered;
   @include flexbox(column, center, stretch);
-  position: sticky;
-  top: 0px;
   padding: $small $half;
-  background: $color-main;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition-duration: 300ms;
-
-  box-shadow: 0px 0px 3px 1px rgba(82, 161, 126, 0.4);
-
+  background-color: $color-main-transparent;
+  box-shadow: 0 0 2px 2px #00221c40;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 100;
-}
-
-.header .hide {
-  display: none;
 }
 
 .header_container {
@@ -26,7 +19,7 @@
 }
 
 .header_logo {
-  height: 30px;
+  height: 20px;
 }
 
 .header_nav {
