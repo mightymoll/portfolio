@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 function Header() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+  console.log(handleClick)
 
   return (
     <header>
