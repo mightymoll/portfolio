@@ -1,3 +1,9 @@
+.contact_container {
+  @include flexbox(column, flex-start);
+  padding: $half $full $full;
+  position: relative;
+}
+
 .contact_title {
   color: #FFF;
   text-shadow: text3D(3, $color-accent);

@@ -8,20 +8,31 @@
 @import "./styles/components/hero";
 @import "./styles/components/card";
 @import "./styles/components/contact";
+@import "./styles/components/construction";
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: $color-main;
+
+  @include respond(tablet) {
+    background: $color-main;
+  }
 }
 
 .App_container {
+  height: 100%;
+  max-height: 100%;
   @extend %centered;
   min-width: 320px;
   max-width: 1800px;
   color: #FFF;
+  background: $color-main;
   font: map-get($textstyle, regular);
+
+  @include respond(desktopXL) {
+    border: 5px solid $color-main;
+  }
 }
 
 h1 {
@@ -114,10 +125,4 @@ a.button {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.contact_container {
-  @include flexbox(column, flex-start);
-  padding: $half $full $full;
-  position: relative;
 }

@@ -1,0 +1,70 @@
+.construction_container {
+  @include flexbox(column, space-between, center);
+  background: $color-main;
+  padding: $half $small $small;
+  min-height: min-content;
+}
+
+.construction_tagline {
+  font-size: 2rem;
+
+  @include respond(tablet) {
+    font-size: 2.5rem;
+  }
+}
+
+.construction_image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin-bottom: $small;
+  position: relative;
+
+  filter: opacity(90%);
+  overflow: hidden;
+
+  border: 2px solid $color-accent;
+  box-shadow: 5px 5px 0 0 #4c1c84;
+
+  @include respond(mobile-tall) {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+  }
+}
+
+.construction_image>img {
+  height: 105px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  object-fit: cover;
+
+  @include respond(mobile-tall) {
+    height: 105px;
+  }
+}
+
+.construction_message {
+  text-align: center;
+}
+
+.construction_email {
+  text-align: center;
+  margin-bottom: auto;
+
+  &>a {
+    color: $color-accent;
+    font-size: 1.2rem;
+  }
+}
+
+.construction_logo {
+  height: 20px;
+  align-self: center;
+  margin-top: 100px;
+
+  &>* {
+    height: 20px;
+  }
+}

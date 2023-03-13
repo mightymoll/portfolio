@@ -1,6 +1,7 @@
 .card_container {
   @extend %card;
-  flex: 1 0 28%;
+  flex: 1 1 45%;
+  min-width: 25%;
   height: 400px;
   background-color: #FFF;
 
