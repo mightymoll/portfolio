@@ -2,7 +2,7 @@
 import meImage from '../assets/me.png'
 import Hero from '../components/Hero';
 import Projects from './Projects';
-import Contact from '../components/Contact';
+import Contact from './Contact';
 
 function Home() {
   return (

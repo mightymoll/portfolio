@@ -1700,6 +1700,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emailjs/browser@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@emailjs/browser@npm:3.10.0"
+  checksum: e54784bb938b333dc2ba3d68ddf1c7322071651372da9a23ee0f5a9eb444c6b6a65155aec9c4570f3db7bac4926e30627b052ea90f0994e7be57298b9964b781
+  languageName: node
+  linkType: hard
+
 "@eslint/eslintrc@npm:^1.4.1":
   version: 1.4.1
   resolution: "@eslint/eslintrc@npm:1.4.1"
@@ -3678,6 +3685,18 @@ __metadata:
   version: 1.0.0
   resolution: "at-least-node@npm:1.0.0"
   checksum: 463e2f8e43384f1afb54bc68485c436d7622acec08b6fad269b421cb1d29cebb5af751426793d0961ed243146fe4dc983402f6d5a51b720b277818dbf6f2e49e
+  languageName: node
+  linkType: hard
+
+"autoclean@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "autoclean@npm:1.0.2"
+  dependencies:
+    fs-extra: ^5.0.0
+    minimist: ^1.2.0
+  bin:
+    autoclean: ./bin.js
+  checksum: 250fb45ed68de05fc0bff839de6b1fe9cf5559edf6b11a81398ee95a4f4b21dc1ca1b0cd20b9f54c4146bf93b29ba271fbd51f4673bb64fbfc6c6aff5b20a91e
   languageName: node
   linkType: hard
 
@@ -6286,6 +6305,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "fs-extra@npm:5.0.0"
+  dependencies:
+    graceful-fs: ^4.1.2
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: b3dcaf1d545097013c4fa649951c85cad1b845316ab473cc3440254a45e9b0b17d8ca9355af477e982c7d126f1a30417bcf78b1f744593ce77a0f43165f2d5e5
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^9.0.0, fs-extra@npm:^9.0.1":
   version: 9.1.0
   resolution: "fs-extra@npm:9.1.0"
@@ -8245,6 +8275,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonfile@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "jsonfile@npm:4.0.0"
+  dependencies:
+    graceful-fs: ^4.1.6
+  dependenciesMeta:
+    graceful-fs:
+      optional: true
+  checksum: 6447d6224f0d31623eef9b51185af03ac328a7553efcee30fa423d98a9e276ca08db87d71e17f2310b0263fd3ffa6c2a90a6308367f661dc21580f9469897c9e
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^6.0.1":
   version: 6.1.0
   resolution: "jsonfile@npm:6.1.0"
@@ -9430,9 +9472,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
+    "@emailjs/browser": ^3.10.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
+    autoclean: ^1.0.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-hash-link: ^1.0.2
@@ -12333,6 +12377,13 @@ __metadata:
   dependencies:
     crypto-random-string: ^2.0.0
   checksum: ef68f639136bcfe040cf7e3cd7a8dff076a665288122855148a6f7134092e6ed33bf83a7f3a9185e46c98dddc445a0da6ac25612afa1a7c38b8b654d6c02498e
+  languageName: node
+  linkType: hard
+
+"universalify@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "universalify@npm:0.1.2"
+  checksum: 40cdc60f6e61070fe658ca36016a8f4ec216b29bf04a55dce14e3710cc84c7448538ef4dad3728d0bfe29975ccd7bfb5f414c45e7b78883567fb31b246f02dff
   languageName: node
   linkType: hard
 

@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_an67sqn",
+      "template_bgbyr3d",
+      form.current,
+      "Hpk5w75e_cvizNC0o"
+    )
+      .then(
+        result => console.log(result.text),
+        error => console.log(error.text)
+      );
+    e.target.reset();
+  }
+
   return (
     <section id="contact">
       <div className="contact_container">
@@ -10,21 +29,19 @@ function Contact() {
           <p>just want to say hi?</p>
           <p>found a bug?</p>
         </div>
-        <form id="contact-form">
+        <form className="contact-form box" ref={form} onSubmit={sendEmail}>
           <div className="sender">
-            <div className="form-group">
-              <label htmlFor="name">Your Name :</label>
-              <input type="text" className="form-control" placeholder="Jacques Almanac" />
+            <div className="form_group">
+              <label className="form_label">{'> Name :'}</label>
+              <input className="form_input" type="text" name="user_name" placeholder="Jacques Almanac" required />
             </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Your Email :</label>
-              <input type="email" className="form-control" placeholder="emailhandle@sacrebleu.com" aria-describedby="emailHelp" />
+            <div className="form_group">
+              <label className="form_label">{'> Email :'}</label>
+              <input className="form_input" type="email" name="user_email" placeholder="emailhandle@sacrebleu.com" aria-describedby="emailHelp" required />
             </div>
           </div>
-          <div className="form-group">
-            <label className="label_message" htmlFor="message">Message :</label>
-            <textarea className="form-control" placeholder="your message goes here; I know you know, but y'know.." rows="5"></textarea>
-          </div>
+          <label className="form_label">{'> Message :'}</label>
+          <textarea className="form_message" name="message" placeholder="your message goes here; I know you know, but y'know..." required></textarea>
           <button type="submit" className="button-submit">send via internet ✨MAGIC✨</button>
         </form>
       </div>

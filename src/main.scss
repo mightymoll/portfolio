@@ -117,6 +117,7 @@ a.button {
 }
 
 .contact_container {
-  padding: $half $full;
+  @include flexbox(column, flex-start);
+  padding: $half $full $full;
   position: relative;
 }

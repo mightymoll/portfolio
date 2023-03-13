@@ -9,60 +9,79 @@
   gap: $small;
 
   & p {
-    font: map-get($textstyle, large);
+    font-family: $font-code;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 8px 0 $small;
   }
 }
 
-#contact-form {
+.contact-form {
   @include flexbox(column, flex-start);
-  background-color: $color-transparent;
-  padding: $half;
+  background-color: $color-light;
+  padding: 30px $half $half;
   border-radius: $radius-lg;
-  box-shadow: 2px 2px 4px 4px #00221cc7;
+  border: 4px solid $color-alt;
+  box-shadow: 6px 6px 0 0 $color-alt;
 }
 
 .sender {
-  @include flexbox(row, flex-start);
+  @include flexbox(row, space-between);
   gap: $half;
   margin-bottom: $small;
+}
 
-  & input {
-    width: 300px;
-    height: 20px;
-    padding: 4px;
-    border-radius: $radius-med;
-    border: 4px inset $color-alt;
-    margin-top: 10px;
+.form_group {
+  flex: 1 1 50%;
+  @include flexbox(column, flex-start);
+}
+
+.form_label {
+  flex: 1 1 50%;
+  font: map-get($textstyle, bold);
+  color: $color-main;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.form_input {
+  padding: 8px;
+  color: $color-main;
+  font-family: $font-code;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #FFF;
+  border-radius: $radius-med;
+  border: 2px solid $color-main;
+
+  &::placeholder {
+    color: #8FC5A4;
+    font-family: $font-code;
+    font-weight: 300;
   }
 }
 
-.label_message {
-  @include flexbox(row, flex-start);
-}
-
-
-label {
-  font: map-get($textstyle, bold);
-  color: #FFF;
-  margin-right: $small;
-  text-transform: uppercase;
-}
-
-input {
-  background-color: #FFF;
-}
-
-textarea {
-  width: 100%;
+.form_message {
   height: 140px;
-  margin-bottom: $small;
+  padding: 8px;
   background-color: #FFF;
+  margin: 0;
 
-  padding: 4px;
+  color: $color-main;
+  font-family: $font-code;
+  font-size: 1.1rem;
+  font-weight: 500;
+
   border-radius: $radius-med;
   border: 4px inset $color-alt;
-  margin-top: 10px;
+
+  &::placeholder {
+    color: #8FC5A4;
+    font-family: $font-code;
+    font-weight: 300;
+  }
 }
+
 
 .button-submit {
   align-self: center;
@@ -71,6 +90,7 @@ textarea {
   font-weight: 600;
   font-size: 1.2rem;
   width: 300px;
+  margin-top: 20px;
   text-decoration: none;
   text-align: center;
   padding: 10px 12px 8px;
