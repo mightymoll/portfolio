@@ -7,6 +7,7 @@
 @import "./styles/components/header";
 @import "./styles/components/hero";
 @import "./styles/components/card";
+@import "./styles/components/contact";
 
 body {
   box-sizing: border-box;
@@ -34,10 +35,8 @@ h1 {
 
 h2 {
   font: map-get($textstyle, xlarge);
-  color: $color-main;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: text3D(3, #FFF);
 
   margin: 0 0 $half;
 }
@@ -93,13 +92,18 @@ a.button {
 }
 
 .projects_container {
-  padding: $half $full $half;
+  padding: $half $full;
   position: relative;
   background: $color-light;
   margin-bottom: $full;
   z-index: 1;
   @include angle(after);
   @include angle(before, true);
+}
+
+.projects_title {
+  color: $color-main;
+  text-shadow: text3D(3, #FFF);
 }
 
 .projects_gallery {
@@ -110,4 +114,9 @@ a.button {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.contact_container {
+  padding: $half $full;
+  position: relative;
 }

@@ -1,0 +1,91 @@
+.contact_title {
+  color: #FFF;
+  text-shadow: text3D(3, $color-accent);
+  margin: 0;
+}
+
+.contact_subtext {
+  @include flexbox(row, flex-start);
+  gap: $small;
+
+  & p {
+    font: map-get($textstyle, large);
+  }
+}
+
+#contact-form {
+  @include flexbox(column, flex-start);
+  background-color: $color-transparent;
+  padding: $half;
+  border-radius: $radius-lg;
+  box-shadow: 2px 2px 4px 4px #00221cc7;
+}
+
+.sender {
+  @include flexbox(row, flex-start);
+  gap: $half;
+  margin-bottom: $small;
+
+  & input {
+    width: 300px;
+    height: 20px;
+    padding: 4px;
+    border-radius: $radius-med;
+    border: 4px inset $color-alt;
+    margin-top: 10px;
+  }
+}
+
+.label_message {
+  @include flexbox(row, flex-start);
+}
+
+
+label {
+  font: map-get($textstyle, bold);
+  color: #FFF;
+  margin-right: $small;
+  text-transform: uppercase;
+}
+
+input {
+  background-color: #FFF;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+  margin-bottom: $small;
+  background-color: #FFF;
+
+  padding: 4px;
+  border-radius: $radius-med;
+  border: 4px inset $color-alt;
+  margin-top: 10px;
+}
+
+.button-submit {
+  align-self: center;
+  color: $color-main;
+  font: map-get($textstyle, code);
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 300px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 12px 8px;
+  background-color: #FFF;
+  border-radius: $radius-med;
+  border: 4px solid $color-accent;
+  box-shadow: 4px 4px 0 0 $color-accent;
+  box-shadow: 5px 5px 3px 0px #4c1c84c7;
+
+  &:hover {
+    color: #FFF;
+    background-color: #4c1c84;
+    border: 4px solid #4c1c84;
+    box-shadow: 4px 4px 0 0 #4c1c84;
+    box-shadow: 5px 5px 3px 0px #2b0b4fc7;
+    transition: 0.2s ease all;
+  }
+}
