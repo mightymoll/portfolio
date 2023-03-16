@@ -24,7 +24,7 @@ export const projectData =
       "description": "Populate an e‑commerce front‑end via rest API",
       "timeline": "5 weeks",
       "tags": [
-        "JavScript",
+        "JavaScript",
         "API rest",
         "localStorage"
       ],
