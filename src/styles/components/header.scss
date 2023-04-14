@@ -12,6 +12,10 @@ header {
   top: 0;
   z-index: 100;
   cursor: pointer;
+
+  @include mobile {
+    padding: 16px $small;
+  }
 }
 
 .header_container {

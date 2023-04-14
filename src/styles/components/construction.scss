@@ -8,7 +8,7 @@
 .construction_tagline {
   font-size: 2rem;
 
-  @include respond(tablet) {
+  @include tablet {
     font-size: 2.5rem;
   }
 }
@@ -26,7 +26,7 @@
   border: 2px solid $color-accent;
   box-shadow: 5px 5px 0 0 #4c1c84;
 
-  @include respond(mobile-tall) {
+  @include mobile {
     height: 100px;
     width: 100px;
     border-radius: 50px;
@@ -40,7 +40,7 @@
   top: 0px;
   object-fit: cover;
 
-  @include respond(mobile-tall) {
+  @include mobile {
     height: 105px;
   }
 }

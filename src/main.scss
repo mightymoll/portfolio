@@ -1,8 +1,13 @@
-// import all SCSS stylesheets for main to reference/use
+// import fonts used from google //
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&display=swap');
+
+// SCSS FILES //
 @import "./styles/mixins.scss";
 @import "./styles/variables.scss";
 
-
+// component styles //
 @import "./styles/components/footer";
 @import "./styles/components/header";
 @import "./styles/components/hero";
@@ -10,13 +15,40 @@
 @import "./styles/components/contact";
 @import "./styles/components/construction";
 
+
+// BREAKPOINTS REFERENCE:
+/* standards for screen sizes (media queries)
+/* designed desktop-first
+-desktopXL: > 1800px
+-tablet: 481px - 889px
+-mobile: 320px -  480px
+*/
+
+html {
+  font-size: 16px;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: $color-main;
 
-  @include respond(tablet) {
-    background: $color-main;
+  @include mobile {
+    font-size: 0.7rem;
+  }
+
+  @include tablet {
+    font-size: 0.9rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.15rem;
+    background: #FFF;
   }
 }
 
@@ -24,15 +56,28 @@ body {
   height: 100%;
   max-height: 100%;
   @extend %centered;
-  min-width: 320px;
+  width: 100%;
   max-width: 1800px;
   color: #FFF;
-  background: $color-main;
   font: map-get($textstyle, regular);
 
-  @include respond(desktopXL) {
+  @include desktopXL {
     border: 5px solid $color-main;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 h1 {
@@ -42,6 +87,11 @@ h1 {
   text-shadow: text3D(3, $color-accent);
 
   margin: 0 0 $small;
+
+  @include mobile {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+  }
 }
 
 h2 {
@@ -50,6 +100,10 @@ h2 {
   text-transform: uppercase;
 
   margin: 0 0 $half;
+
+  @include mobile {
+    margin: 0 0 25px;
+  }
 }
 
 h3 {
@@ -72,6 +126,8 @@ h4 {
 
 p {
   font: map-get($textstyle, regular);
+  margin-bottom: 10px;
+  ;
 }
 
 a.button {
@@ -95,11 +151,12 @@ a.button {
     box-shadow: 2px 2px 0 0 $color-accent;
     transition: 0.2s ease all;
   }
-}
 
-.container {
-  @include flexbox(row, space-between, flex-start);
-  padding: $half;
+  @include mobile {
+    width: 30px;
+    padding: 5px 6px 3px;
+    font-size: 0.9rem;
+  }
 }
 
 .projects_container {
@@ -110,6 +167,15 @@ a.button {
   z-index: 1;
   @include angle(after);
   @include angle(before, true);
+
+  @include tablet {
+    padding: $small $half;
+  }
+
+  @include mobile {
+    padding: 30px;
+    margin-bottom: $small;
+  }
 }
 
 .projects_title {
@@ -125,4 +191,8 @@ a.button {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include mobile {
+    gap: 25px;
+  }
 }

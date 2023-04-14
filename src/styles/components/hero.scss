@@ -1,25 +1,46 @@
 .hero {
   @extend %centered;
-  @include flexbox(row, space-between, center);
+  @include flexbox(row, space-between, flex-start);
   height: 30%;
-  padding: 0 $full;
-  margin-bottom: $full;
+  padding: $half $full;
+  margin-bottom: $half;
+
+  @include tablet {
+    padding: $small;
+    margin-bottom: $half;
+  }
+
+  @include mobile {
+    padding: 30px;
+    padding-bottom: $half;
+    margin-bottom: $small;
+  }
 }
 
 .hero_main {
   max-width: 65%;
-  @include flexbox(row, flex-start, center);
+  @include flexbox(row, space-between, center);
   margin-right: $half;
+
+  @include tablet {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .hero_info {
   @include flexbox(column, flex-start);
-  padding-top: $half;
   max-width: 550px;
   z-index: 50;
 
   p {
     font-size: 1.2rem;
+
+    @include mobile {
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
   }
 
   strong {
@@ -28,12 +49,16 @@
 }
 
 .hero_stack {
-  @include flexbox(row, space-between);
+  @include flexbox(row, flex-start);
   gap: $small;
   flex-wrap: nowrap;
-  list-style: none;
-  padding: 0;
   margin: 0 0 $small;
+
+  @include mobile {
+    @include flexbox(row, space-between);
+    flex-wrap: wrap;
+    margin: 0 0 10px;
+  }
 }
 
 .stack_item {
@@ -41,17 +66,31 @@
   font: map-get($textstyle, small);
   margin: 0;
   min-width: max-content;
+
+  @include mobile {
+    flex: 1 0 25%;
+  }
 }
 
 .stack_item>img {
   height: 40px;
   margin-bottom: 10px;
   filter: saturate(0) brightness(200%);
+
+  @include mobile {
+    height: 35px;
+    margin-bottom: 8px;
+  }
 }
 
 .hero_buttons {
   @include flexbox(row, flex-start);
   gap: $half;
+
+  @include mobile {
+    @include flexbox(row, space-between);
+    gap: 15px;
+  }
 }
 
 .hero_image {
@@ -63,12 +102,22 @@
   mix-blend-mode: multiply;
   filter: opacity(90%);
   overflow: hidden;
+
+  @include tablet {
+    margin-right: 0px;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+  }
 }
 
 .hero_image>img {
   width: 100%;
   z-index: -1;
 }
+
+// Element below not shown in tablet or mobile sizes:
 
 .hero_aside {
   @include flexbox(row, center, center);

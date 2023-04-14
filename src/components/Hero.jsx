@@ -10,6 +10,18 @@ import sass from '../assets/stackLogos/SASS.png';
 
 
 function Hero() {
+  const smallScreen = () => {
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (screenWidth < 991) {
+      return 'true'
+    }
+    else if (screenWidth >= 990) {
+      return 'false'
+    }
+  }
+
   return (
     <section className="hero">
       <div className="hero_main">
@@ -37,17 +49,21 @@ function Hero() {
           <img src={myImage} alt="Molly running" />
         </div>
       </div>
-      <aside className="hero_aside">
-        <div className="hero_aside-background">
-          <img src={carrotGraphic} alt="decorative graphic" />
-        </div>
-        <div className="hero_function">
-          <span className="typed line_1"><span>{`if (theDevil == isInTheDetails) {`}</span></span>
-          <span className="typed line_2"><span>{`goodFriendsOfMine.push(theDevil)`}</span></span>
-          <span className="typed line_3"><span>{`};`}</span></span>
-        </div>
-      </aside>
-    </section>
+      {smallScreen() === 'false' ?
+        <aside className="hero_aside">
+          <div className="hero_aside-background">
+            <img src={carrotGraphic} alt="decorative graphic" />
+          </div>
+          <div className="hero_function">
+            <span className="typed line_1"><span>{`if (theDevil == isInTheDetails) {`}</span></span>
+            <span className="typed line_2"><span>{`goodFriendsOfMine.push(theDevil)`}</span></span>
+            <span className="typed line_3"><span>{`};`}</span></span>
+          </div>
+        </aside>
+        :
+        <aside></aside>
+      }
+    </section >
   )
 };
 
