@@ -42,7 +42,9 @@ function EmailForm() {
             <label className="form_label">{'> Message :'}</label>
             <textarea className="form_message" name="message" placeholder="your message goes here; I know you know, but y'know..." required></textarea>
           </div>
-          <button type="submit" className="button-submit">send via internet ✨MAGIC✨</button>
+          <button type="submit" className="button-submit">{
+            // shorter button text on mobile
+            window.innerWidth > 480 ? "send via internet ✨MAGIC✨" : "✨send✨"}</button>
         </form >
         <div>{status === 'error' ?
           <div className="form_error">
