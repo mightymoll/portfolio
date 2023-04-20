@@ -10,21 +10,19 @@
   }
 
   @include mobile {
-    padding: 30px;
-    padding-bottom: $half;
+    padding: 30px 10px $half 30px;
     margin-bottom: $small;
   }
 }
 
 .hero_main {
   max-width: 65%;
-  @include flexbox(row, space-between, center);
-  margin-right: $half;
+  @include flexbox(row, flex-start);
+  object-fit: contain;
 
-  @include tablet {
+  @include mobile {
     max-width: 100%;
     width: 100%;
-    margin-right: 0;
   }
 }
 
@@ -32,9 +30,14 @@
   @include flexbox(column, flex-start);
   max-width: 550px;
   z-index: 50;
+  margin-right: $half;
 
   @include desktopXL {
     max-width: 700px;
+  }
+
+  @include mobile {
+    margin-right: -$half;
   }
 
   p {
@@ -43,7 +46,6 @@
     @include mobile {
       margin-top: 10px;
     }
-
   }
 
   strong {
@@ -104,14 +106,13 @@
 
   mix-blend-mode: multiply;
   filter: opacity(90%);
-  overflow: hidden;
 
   @include tablet {
     margin-right: 0px;
   }
 
   @include mobile {
-    margin-top: 10px;
+    margin-top: -10px;
   }
 }
 

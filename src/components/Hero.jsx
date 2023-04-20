@@ -14,10 +14,10 @@ function Hero() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth ||
       document.body.clientWidth;
 
-    if (screenWidth < 960) {
+    if (screenWidth < 767) {
       return 'true'
     }
-    else if (screenWidth >= 961) {
+    else if (screenWidth >= 768) {
       return 'false'
     }
   }

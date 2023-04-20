@@ -1,6 +1,6 @@
 .contact_container {
   @include flexbox(column, flex-start);
-  padding: $full;
+  padding: $half $full;
   position: relative;
 
   @include tablet {

@@ -19,9 +19,9 @@
 // BREAKPOINTS REFERENCE:
 /* standards for screen sizes (media queries)
 /* designed desktop-first
--desktopXL: > 1800px
--tablet: 768px - 960px
--mobile: 320px -  767px
+-desktopXL: min 1800px
+-tablet: max 992px
+-mobile: max 576px
 */
 
 html {
@@ -31,6 +31,7 @@ html {
   @include mobile {
     font-size: 12px;
   }
+
 
   @include desktopXL {
     font-size: 20px;

@@ -25,9 +25,4 @@
   color: $color-light;
   line-height: 27px;
   margin: 0;
-
-  @include mobile {
-    min-width: 180px;
-    text-align: center;
-  }
 }
