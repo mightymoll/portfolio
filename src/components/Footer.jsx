@@ -9,7 +9,12 @@ function Footer() {
   return (
     <footer className='footer_container'>
       <VIcon fill="#BDE0C0" transform='rotate(90),scale(-0.4, 0.4)' alt='>' />
-      <p className='footer_copyright'>Copyright © {year} Molly Felts Vallin</p>
+      {window.innerWidth < 360 ?
+        // add linebreak for smaller screens
+        <p className='footer_copyright'>Copyright © {year}
+          <br /> Molly Felts Vallin</p>
+        :
+        <p className='footer_copyright'>Copyright © {year} Molly Felts Vallin</p>}
       <VIcon fill="#BDE0C0" transform='rotate(-90),translate(0,0) scale(-0.4, 0.4)' alt='>' />
     </footer >
   )
