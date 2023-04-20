@@ -16,6 +16,10 @@ header {
   @include mobile {
     padding: 16px $small;
   }
+
+  @include desktopXL {
+    padding: 30px $full;
+  }
 }
 
 .header_container {
@@ -28,6 +32,10 @@ header {
 
 .header_nav {
   @include flexbox(row, space-between, center, 10px);
+
+  @include desktopXL {
+    gap: $half
+  }
 }
 
 .header_nav a {

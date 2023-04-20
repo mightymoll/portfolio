@@ -21,6 +21,10 @@
     border: 3px solid $color-main;
     box-shadow: 3px 3px 0px 0 $color-main;
   }
+
+  @include desktopXL {
+    flex: 1 1 30%;
+  }
 }
 
 // position must be relative for link 'overlay' to show
@@ -134,4 +138,10 @@
   font-weight: 600;
   text-align: center;
   line-height: 20px;
+
+  @include desktopXL {
+    height: 30px;
+    padding: 0px 12px;
+    line-height: 30px;
+  }
 }
