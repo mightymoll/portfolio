@@ -10,6 +10,10 @@
     padding: 10px;
   }
 
+  @include tablet {
+    height: 30px;
+  }
+
   svg {
     overflow: visible;
     margin-inline-start: -10px;
@@ -20,10 +24,10 @@
 .footer_copyright {
   color: $color-light;
   line-height: 27px;
+  margin: 0;
 
   @include mobile {
     min-width: 180px;
     text-align: center;
-    margin: 0;
   }
 }

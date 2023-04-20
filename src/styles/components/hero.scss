@@ -6,8 +6,7 @@
   margin-bottom: $half;
 
   @include tablet {
-    padding: $small;
-    margin-bottom: $half;
+    padding: 10px $half;
   }
 
   @include mobile {

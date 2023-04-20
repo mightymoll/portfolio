@@ -28,7 +28,7 @@
     font-family: $font-code;
     font-size: 1.2rem;
     font-weight: 300;
-    margin: 8px 0 $small;
+    margin: 0 0 $small;
   }
 
   @include mobile {
@@ -68,6 +68,11 @@
   margin-bottom: $small;
 
   @include tablet {
+    @include flexbox(column, flex-start);
+    gap: $small;
+  }
+
+  @include mobile {
     @include flexbox(column, flex-start);
     gap: $small;
   }
