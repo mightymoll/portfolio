@@ -1,24 +1,30 @@
 .footer_container {
   @include flexbox(row, center, center);
-  height: 60px;
-  gap: 10px;
+  gap: $half;
   padding: $small;
   border-top: 1px solid $color-light;
   box-shadow: 0 0 1px 2px #2dffbc40;
 
   @include mobile {
-    padding: 10px;
+    gap: $small;
   }
+}
 
-  @include tablet {
-    height: 30px;
-  }
+.vIcon {
+  height: 40px;
+  object-fit: contain;
 
-  svg {
-    overflow: visible;
-    margin-inline-start: -10px;
-    margin-inline-end: -10px;
+  @include mobile {
+    height: 24px;
   }
+}
+
+.vIcon img {
+  height: 100%;
+}
+
+.vIcon.right {
+  transform: rotate(180deg)
 }
 
 .footer_copyright {
