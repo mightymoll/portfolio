@@ -28,9 +28,8 @@ html {
   font: map-get($textstyle, regular);
 
   @include mobile {
-    font-size: 12px;
+    font-size: 14px;
   }
-
 
   @include desktopXL {
     font-size: 20px;
@@ -41,8 +40,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-
 
   @include desktopXL {
     background: #FFF;
